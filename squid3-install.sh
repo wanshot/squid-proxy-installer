@@ -84,8 +84,8 @@ elif cat /etc/os-release | grep PRETTY_NAME | grep "CentOS Linux 7"; then
     /usr/bin/wget --no-check-certificate -O /etc/squid/squid.conf https://raw.githubusercontent.com/wanshot/squid-proxy-installer/master/conf/squid-centos7.conf
     systemctl enable squid
     systemctl restart squid
-    firewall-cmd --zone=public --permanent --add-port=3128/tcp
-    firewall-cmd --reload
+    # firewall-cmd --zone=public --permanent --add-port=3128/tcp
+    # firewall-cmd --reload
 else
     echo "OS NOT SUPPORTED.\n"
     exit 1;
